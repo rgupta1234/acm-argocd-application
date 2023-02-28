@@ -22,4 +22,4 @@ oc apply -k gitops/manifests/bootstrap/advanced-cluster-management/base
 oc apply -k gitops/manifests/bootstrap/openshift-gitops-operator/base
 ```
 
-Now we will add the spoke cluster as managed cluster in ACM, this is a manual step to import an existing cluster into ACM.
+Now we will add the spoke cluster as managed cluster in ACM, this is a manual step and after that we will be adding the resources to configure the Argo and ACM integration.

@@ -7,3 +7,7 @@ resources:
   - subscription.yaml
   - clusterrolebinding-admin.yaml
   - multiclusterhub.yaml
+  - managedclusterset.yaml
+  - managedclustersetbinding.yaml
+  - placement.yaml
+
