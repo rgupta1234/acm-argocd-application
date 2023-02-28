@@ -14,6 +14,12 @@ We will need at least *two* fresh installed OCP clusters, one to act as Hub and 
 
 First lets deploy ACM Hub operator and OpenShift GitOps operator.
 
-Then we have to configure ArgoCD to use OpenShift Oauth.
+```
+oc apply -k gitops/manifests/bootstrap/advanced-cluster-management/base
+```
 
-Now we will add the spoke cluster as managed cluster in ACM.
+```
+oc apply -k gitops/manifests/bootstrap/openshift-gitops-operator/base
+```
+
+Now we will add the spoke cluster as managed cluster in ACM, this is a manual step to import an existing cluster into ACM.
