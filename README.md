@@ -2,7 +2,7 @@
 
 ACM and ArgoCD integration that deploys an application to all ACM managed cluster using ArgoCD.
 
-## Idea
+### Idea
 
 The idea is to have ACM managing clusters and give Argo visibility to it so Argo can sync your application repositories with them.
 
