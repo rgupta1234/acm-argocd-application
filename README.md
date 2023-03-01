@@ -15,11 +15,11 @@ We will need at least *two* fresh installed OCP clusters, one to act as Hub and 
 First lets deploy ACM Hub operator and OpenShift GitOps operator.
 
 ```
-oc apply -k gitops/manifests/bootstrap/advanced-cluster-management/base
+until oc apply -k gitops/manifests/bootstrap/openshift-gitops-operator/base; do sleep 5; done
 ```
 
 ```
-oc apply -k gitops/manifests/bootstrap/openshift-gitops-operator/base
+until oc apply -k gitops/manifests/bootstrap/advanced-cluster-management/base; do sleep 15; done
 ```
 
 Now we will add the spoke cluster as managed cluster in ACM, this is a manual step and after that we will be adding the resources to configure the Argo and ACM integration.
