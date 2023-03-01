@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nodejs-welcome
+  namespace: welcome
+  labels:
+    app: nodejs-welcome
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nodejs-welcome
+  template:
+    metadata:
+      labels:
+        app: nodejs-welcome
+    spec:
+      containers:
+        - name: nodejs-welcome
+          image: quay.io/stauil/nodejs-welcome:latest
+          ports:
+            - containerPort: 8080
+              protocol: TCP

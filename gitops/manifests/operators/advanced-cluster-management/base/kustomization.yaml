@@ -13,4 +13,5 @@ resources:
   - managedclusterset.yaml
   - managedclustersetbinding.yaml
   - placement.yaml
+  - gitopscluster.yaml
 

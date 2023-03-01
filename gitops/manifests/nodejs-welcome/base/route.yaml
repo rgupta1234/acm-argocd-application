@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: nodejs-welcome
+  namespace: welcome
+  labels:
+    app: nodejs-welcome
+spec:
+  to:
+    kind: Service
+    name: nodejs-welcome
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None

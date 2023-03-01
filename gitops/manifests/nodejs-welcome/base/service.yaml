@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nodejs-welcome
+  namespace: welcome
+  labels:
+    app: nodejs-welcome
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: nodejs-welcome
+  type: ClusterIP
+  sessionAffinity: None
+status:
+  loadBalancer: {}
