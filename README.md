@@ -40,4 +40,26 @@ The last step is to create the `ApplicationSet` in Argo that will create applica
 oc apply -k gitops/manifests/content/demo/apps/base
 ```
 
+### Validation  
+
+After provisioning the operators and deploying the application using the app of apps pattern with Argo, we can validate it by checking:
+
+Your managed clusters:
+
+```
+oc get managedcluster
+```
+
+Your placement rule:
+
+```
+oc get placement -n openshift-gitops
+```
+
+Your GitOps cluster:
+
+```
+oc get gitopscluster demo-gitops-cluster -n openshift-gitops -o=jsonpath='{.status.message}'
+```
+
 Now, open the Argo web console and check the two created applications and that is synced with both clusters, also check the pods under the `welcome` project, they should be running the nodejs sample application.
