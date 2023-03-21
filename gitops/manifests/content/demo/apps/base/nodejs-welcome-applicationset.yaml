@@ -17,7 +17,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/sa-ne/acm-argocd-application.git
+        repoURL: https://github.com/rgupta1234/acm-argocd-application.git
         targetRevision: main
         path: gitops/manifests/nodejs-welcome/base
       destination:
