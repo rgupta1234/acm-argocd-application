@@ -4,7 +4,8 @@ metadata:
   name: nodejs-welcome
   namespace: welcome
   labels:
-    app: nodejs-welcome
+    app: nodejs-welcome 
+    app2: nodejs-welcome
 spec:
   replicas: 5
   selector:
