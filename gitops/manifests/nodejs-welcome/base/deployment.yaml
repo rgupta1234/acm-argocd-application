@@ -2,7 +2,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: nodejs-welcome
-  namespace: welcome2
+  namespace: welcome4
   labels:
     app: nodejs-welcome 
     app2: nodejs-welcome
