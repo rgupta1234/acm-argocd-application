@@ -7,6 +7,10 @@ spec:
   dex:
     openShiftOAuth: true
   rbac:
+    policy: |
+      g, system:cluster-admins, role:admin
+      g, cluster-admins, role:admin
+    scopes: '[groups]'
     defaultPolicy: "role:admin"
   server:
     insecure: true
