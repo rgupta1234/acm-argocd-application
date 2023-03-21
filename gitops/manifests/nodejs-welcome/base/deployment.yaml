@@ -17,8 +17,8 @@ spec:
         app: nodejs-welcome
     spec:
       containers:
-        - name: test5
-          image: quay.io/skaffoldtest/test6
+        - name: nodejs-welcome
+          image: quay.io/stauil/nodejs-welcome:latest
           ports:
             - containerPort: 8080
               protocol: TCP
