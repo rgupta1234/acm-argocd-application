@@ -1,0 +1,26 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: acm-placement
+  namespace: openshift-gitops
+  uid: 3deabf6a-a62e-4c64-8eea-1a01a5b19893
+  resourceVersion: '1264149'
+  creationTimestamp: '2023-03-21T15:47:10Z'
+  managedFields:
+    - manager: gitopscluster
+      operation: Update
+      apiVersion: v1
+      time: '2023-03-21T15:47:10Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:data':
+          .: {}
+          'f:apiVersion': {}
+          'f:kind': {}
+          'f:matchKey': {}
+          'f:statusListKey': {}
+data:
+  apiVersion: cluster.open-cluster-management.io/v1beta1
+  kind: placementdecisions
+  matchKey: clusterName
+  statusListKey: decisions
